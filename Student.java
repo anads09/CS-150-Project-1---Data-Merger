@@ -1,12 +1,5 @@
 
-package cs150prog01;
-
-/*
- * Austin Nadler
- * CS150-002
- * Program #1 
- * 09/07/2018
- */
+package datamerger;
 
 public class Student {
     private final int [] projectScores = new int[6];
