@@ -1,5 +1,12 @@
 
-package datamerger;
+package cs150proj01;
+
+/*
+ * Austin Nadler
+ * CS150-002
+ * Program #1 
+ * 09/07/2018
+ */
 
 public class Student {
     private final int [] projectScores = new int[6];
@@ -124,8 +131,7 @@ public class Student {
         for(int i = 0; i < MAXL; i++) {
             labPerc = labPerc + getLabScore(i);
         }
-        double output = (labPerc/MAXL) * .10;
-        return output;
+        return (labPerc/MAXL);
     }
     
     public double getHWPerc() {
@@ -133,8 +139,7 @@ public class Student {
         for(int i = 0; i < MAXHW; i++) {
             hwPerc = hwPerc + getHWScore(i);
         }
-        double output = (hwPerc/MAXHW);
-        return output;
+        return (hwPerc/MAXHW);
     }
     
     public double getProjPerc() {
@@ -142,8 +147,7 @@ public class Student {
         for(int i = 0; i < MAXP; i++) {
             projPerc = projPerc + getProjScore(i);
         }
-        double output = (projPerc/MAXP) * .30;
-        return output;
+        return (projPerc/MAXP) * .30;
     }
     
     public double getTestPerc() {
@@ -151,8 +155,7 @@ public class Student {
         for(int i = 0; i < MAXT; i++) {
             testPerc = testPerc + getTestScore(i);
         }
-        double output = (testPerc/MAXT) ;//* .30;
-        return output;
+        return (testPerc/MAXT)  * .30;
     }
     
     public double getFinalExamGradePerc(double score) {

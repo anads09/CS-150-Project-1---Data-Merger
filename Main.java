@@ -1,6 +1,12 @@
 
-package datamerger;
+package cs150proj01;
 
+/*
+ * Austin Nadler
+ * CS150-002
+ * Program #1
+ * 09/07/2018
+ */
 import java.util.*;
 import java.io.*;
 
@@ -15,16 +21,17 @@ public class Main {
     static final int MAXHW = 10;
     
     public static void main(String [] args) {
+         
         loadLectureInfo("CS140-001.txt","CS140-001");
-        loadLectureInfo("CS140-002.txt","CS140-002");
-        loadLectureInfo("CS140-003.txt","CS140-003");
-        loadLectureInfo("CS140-004.txt","CS140-004"); 
+//        loadLectureInfo("CS140-002.txt","CS140-002");
+//        loadLectureInfo("CS140-003.txt","CS140-003");
+//        loadLectureInfo("CS140-004.txt","CS140-004"); 
         
         loadLabInfo("CS140-021.txt","CS140-021");
-        loadLabInfo("CS140-022.txt","CS140-022");
-        loadLabInfo("CS140-023.txt","CS140-023");
-        loadLabInfo("CS140-024.txt","CS140-024");
-        loadLabInfo("CS140-025.txt","CS140-025");
+//        loadLabInfo("CS140-022.txt","CS140-022");
+//        loadLabInfo("CS140-023.txt","CS140-023");
+//        loadLabInfo("CS140-024.txt","CS140-024");
+//        loadLabInfo("CS140-025.txt","CS140-025");
         
         printResult();       
     }
@@ -44,14 +51,17 @@ public class Main {
                  toCSV.print(allStuds.get(i).getLabScore(j) + ",");
             }
             toCSV.printf("%.2f,",allStuds.get(i).getLabPerc());
+            
             for(int j = 0; j < MAXHW; j++) {
                 toCSV.print(allStuds.get(i).getHWScore(j) + ",");
             }
             toCSV.printf("%.2f,",allStuds.get(i).getHWPerc());
+            
             for(int j = 0; j < MAXP; j++) {
                 toCSV.print(allStuds.get(i).getProjScore(j) + ",");
             }
             toCSV.printf("%.2f,",allStuds.get(i).getProjPerc());
+            
             for(int j = 0; j < MAXT; j++) {
                 toCSV.print(allStuds.get(i).getTestScore(j) + ",");
             }
