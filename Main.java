@@ -22,23 +22,18 @@ public class Main {
     
     public static void main(String [] args) {
          
-        loadLectureInfo("CS140-001.txt","CS140-001");
-//        loadLectureInfo("CS140-002.txt","CS140-002");
-//        loadLectureInfo("CS140-003.txt","CS140-003");
-//        loadLectureInfo("CS140-004.txt","CS140-004"); 
+        loadLectureInfo("Lecture1");
+        loadLectureInfo("Lecture2");
         
-        loadLabInfo("CS140-021.txt","CS140-021");
-//        loadLabInfo("CS140-022.txt","CS140-022");
-//        loadLabInfo("CS140-023.txt","CS140-023");
-//        loadLabInfo("CS140-024.txt","CS140-024");
-//        loadLabInfo("CS140-025.txt","CS140-025");
+        loadLabInfo("Lab1");
+        loadLabInfo("Lab2");
         
         printResult();       
     }
     
     public static void printResult() {        
         try {
-            toCSV = new PrintWriter ("CS140FinalGradeReport.csv");
+            toCSV = new PrintWriter ("FinalGradeReport.csv");
         } catch (FileNotFoundException e) {
             System.out.println("File Already Exists!");
             System.exit(1);
@@ -75,9 +70,9 @@ public class Main {
         toCSV.close();        
     }
     
-    public static void loadLabInfo(String fileName, String labSection) {
+    public static void loadLabInfo(String labSection) {
         Scanner fin = null;      
-              
+        String fileName = labSection + ".txt";
         try {
             fin = new Scanner(new File(fileName));
         } catch (FileNotFoundException e) {
@@ -105,7 +100,8 @@ public class Main {
         }
     }
     
-    public static void loadLectureInfo(String fileName,String lectureSec) {
+    public static void loadLectureInfo(String lectureSec) {
+        String fileName = lectureSec + ".txt";
         try {
             fin = new Scanner(new File(fileName));
         } catch (FileNotFoundException e) {
