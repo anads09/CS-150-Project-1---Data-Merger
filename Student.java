@@ -1,13 +1,6 @@
 
 package cs150proj01;
 
-/*
- * Austin Nadler
- * CS150-002
- * Program #1 
- * 09/07/2018
- */
-
 public class Student {
     private final int [] projectScores = new int[6];
     private final int [] testScores = new int [2];
