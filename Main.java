@@ -1,12 +1,6 @@
 
 package cs150proj01;
 
-/*
- * Austin Nadler
- * CS150-002
- * Program #1
- * 09/07/2018
- */
 import java.util.*;
 import java.io.*;
 
